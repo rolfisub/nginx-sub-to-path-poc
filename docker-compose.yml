@@ -1,0 +1,18 @@
+version: '3'
+services:
+  nginx:
+    image: nginx
+    volumes:
+      - ./poc.nginx:/etc/nginx/conf.d/poc.conf
+    depends_on:
+      - test_service
+    ports:
+      - "8080:8080"
+    expose:
+      - 8080
+  test_service:
+    build: ./
+    volumes:
+      - ./src:/opt/test
+    environment:
+      port: "3001"

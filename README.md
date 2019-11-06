@@ -3,12 +3,19 @@ Proxy a subdomain slug to service path POC
 
 ### setup:
 
-1. need to have `docker` and `docker-compose` installed.
+1. need to have installed:
+    
+    `docker`
+    
+    `docker-compose`
+    
+    `node 10 >` && (`npm` || `yarn`)
 2. edit your `/etc/hosts` file and add the following entry:
 
         127.0.0.1       account-slug.example.com
 
-3. run `npm run dev`   OR   `yarn dev`
+3. run `npm install`   ||   `yarn install`
+4. run `npm run dev`   ||   `yarn dev`
 
 ### testing:
 

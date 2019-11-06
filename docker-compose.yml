@@ -14,5 +14,10 @@ services:
     build: ./
     volumes:
       - ./:/opt/test
+    ports:
+      - "3001:3001"
+    expose:
+      - 3001
     environment:
       port: "3001"
+

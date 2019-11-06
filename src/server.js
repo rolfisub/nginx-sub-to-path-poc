@@ -1,4 +1,5 @@
 const express = require("express");
+const morgan = require("morgan");
 const bodyParser = require("body-parser");
 const nconf = require("nconf");
 
@@ -17,6 +18,7 @@ router.get("/:slug/test", function(req, res) {
 const app = express();
 app.set('port', config.port);
 app.use(bodyParser.json());
+app.use(morgan("dev"));
 app.use("/base", router);
 
 

@@ -13,6 +13,6 @@ services:
   test_service:
     build: ./
     volumes:
-      - ./src:/opt/test
+      - ./:/opt/test
     environment:
       port: "3001"
